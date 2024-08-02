@@ -1,31 +1,107 @@
+/* ベーススタイル */
+
 body {
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
     background-color: #f4f4f4;
     color: #333;
-    margin: 0;
-    padding: 20px;
 }
 
-#profile {
-    background: white;
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+/* ヘッダーのスタイル */
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    margin: 0;
+}
+
+
+/* メインコンテンツのスタイル */
+
+main {
+    padding: 80px 20px 20px;
+    /* ヘッダーの高さ分の余白を追加 */
+}
+
+section {
+    background-color: #fff;
     padding: 20px;
-    border-radius: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-h1 {
-    margin-top: 0;
+h2 {
+    color: #333;
+}
+
+h3 {
+    color: #666;
+}
+
+p {
+    line-height: 1.6;
 }
 
 ul {
-    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    /* 複数行に折り返す */
+    justify-content: space-between;
+    /* 要素間のスペースを均等に */
     padding: 0;
+    list-style: none;
 }
 
 ul li {
-    background: #007bff;
-    color: white;
-    padding: 5px 10px;
-    margin: 5px 0;
+    background: #eee;
+    margin: 5px;
+    padding: 10px;
     border-radius: 5px;
+    text-align: center;
+    flex: 1 1 calc(25% - 10px);
+    /* 4列にするための幅を設定 */
+    box-sizing: border-box;
+    /* パディングとボーダーを含めたボックスサイズ */
+}
+
+ul li a {
+    display: block;
+    /* aタグをブロック要素に */
+    margin-top: 10px;
+    /* 画像とテキストの間に余白を追加 */
+}
+
+
+/* フッターのスタイル */
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
 }
