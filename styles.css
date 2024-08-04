@@ -112,20 +112,30 @@ footer {
 .work-container {
     display: flex;
     flex-wrap: nowrap;
-    /* 横並びにするためにnowrapを使用 */
     gap: 20px;
     justify-content: space-between;
 }
 
 .work-card {
     flex: 1 1 45%;
-    /* カードの幅を調整 */
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 10px;
     padding: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin: 10px;
+}
+
+
+/* 画面サイズが600px以下の場合に縦に並ぶようにする */
+
+@media (max-width: 600px) {
+    .work-container {
+        flex-wrap: wrap;
+    }
+    .work-card {
+        flex: 1 1 100%;
+    }
 }
 
 .work-card a {
